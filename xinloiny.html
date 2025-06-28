@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Xin lỗi em 🥺</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-image: url('https://i.imgur.com/your_background_image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .slide {
+      display: none;
+    }
+    .active-slide {
+      display: block;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 15px;
+      margin-top: 5%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Nhạc nền -->
+ <div class="ratio ratio-16x9 mb-3 d-none">
+  <iframe 
+    src="https://www.youtube.com/embed/cizoIav3geY?autoplay=1&loop=1&playlist=cizoIav3geY&mute=0" 
+    allow="autoplay" 
+    allowfullscreen>
+  </iframe>
+</div>
+
+  <div class="container text-center">
+    <!-- Slide 1 -->
+    <div class="slide active-slide" id="slide1">
+      <h1>Em ơi… cho anh xin lỗi 🙇‍♂️</h1>
+      <p>Anh biết mình đã sai, em có thể tha thứ cho anh không?</p>
+      <button class="btn btn-success" onclick="nextSlide()">Có 🥰</button>
+      <button class="btn btn-danger" onclick="alert('🥲 Anh sẽ đợi đến khi em sẵn sàng...')">Không</button>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide2">
+      <h2>Anh nhớ em mỗi ngày 😢</h2>
+      <p>Em có nhớ anh không?</p>
+      <button class="btn btn-success" onclick="nextSlide()">Có 😳</button>
+      <button class="btn btn-secondary" onclick="alert('Thật à… 😭')">Không</button>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide3">
+      <h2>Câu hỏi nhỏ</h2>
+      <p>Chúng ta yêu nhau được bao lâu rồi?</p>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-light" onclick="wrongAnswer()">1 tháng</button>
+        <button class="btn btn-outline-light" onclick="wrongAnswer()">6 tháng</button>
+        <button class="btn btn-outline-light" onclick="nextSlide()">6 năm</button>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="slide" id="slide4">
+      <h2>Tâm sự đôi lời</h2>
+      <p>Hề hề cũng khá lâu rồi chúng ta mới cãi nhau được 1 trận như thế này á. Xin lỗi ng đẹp vì đã không có mặt cả nguyên 1 ngày ;-; hiu hiu. Không có ntin vs ny 1 ngày mà bứt dứt ngứa ngáy hết ng á</p>
+      <p>Thui hok đùa nữa</p>
+      <p>A xem cái video tiktok ny gửi rồi. Đúng là hôm qua a rất mệt. A xin lỗi đã to tiếng với ny :< a không cố ý thế á. Mấy cái như nợ nần a xử lý được á, ny hok phải lo á </p>
+      <p>A hok đủ khả năng combat 1 1 với ny a khi mặt đối mặt được á. :"< thế thì a không nỡ bày tỏ hết lòng mình á. Nên là nếu ny a đọc đến đoạn này rồi thì tiếp theo a xin phép bày tỏ lòng mình á</p>
+      <p>Đôi khi a mong ny a để a tự giải quyết mọi chuyện hơn á. Ví dụ nhé như vụ hôm qua ý, nợ chị Lâm chắc chắn a sẽ trả. Chứ có phải a im im rồi ko trả đou á</p>
+      <p>Cơ mừ a có cách của a. A cx bằng tuổi e mà :< cũng tự giải quyết được chứ :< cx mong ny đôi khi a ko làm theo ý e thì có thể bình tĩnh hỏi a được á</p>
+      <p>chứ như hôm qua không đi đến đâu được á. ;-; e ấm ức a mệt mỏi thế là cta ko nc đc với nhau câu nào á :"< bùn rầu</p>
+      <button class="btn btn-outline-light" onclick="nextSlide()">Nút bày tỏ ý kiến</button>
+
+      
+    </div>
+
+    <!-- Slide 5 - Gửi mail -->
+    <div class="slide" id="slide5">
+      <h2>Gửi lời nhắn đến anh nhé 💌(Gửi thật đấy nên a mong ny sẽ bày tỏ thật lòng hết sức có thể á)</h2>
+      <h2>Đến bước này thì khá chắc a đã ngất xỉu do tối nay a nhậu apple meo meo rồi bia bủng các thứ rồi á. ;-; sr ny a ạ</h2>
+      <form action="https://formspree.io/f/manjaazb" method="POST">
+        <div class="mb-3">
+          <input type="hidden" name="name" class="form-control" placeholder="Tên của em" value="Hang">
+        </div>
+        <div class="mb-3">
+          <textarea name="message" class="form-control" rows="4" placeholder="Lời nhắn cho anh..." required></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="Lời nhắn từ ny ❤️">
+        <input type="hidden" name="_replyto" value="fsapple12347@gmail.com">
+        <button type="submit" class="btn btn-warning">Gửi cho anh 📨</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    let currentSlide = 1;
+    function nextSlide() {
+      document.getElementById(`slide${currentSlide}`).classList.remove('active-slide');
+      currentSlide++;
+      document.getElementById(`slide${currentSlide}`).classList.add('active-slide');
+    }
+    function wrongAnswer() {
+      alert("Sai mất rồi 😅 Em nhớ lại kỹ nha!");
+    }
+  </script>
+</body>
+</html>
